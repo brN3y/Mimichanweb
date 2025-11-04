@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Bot | Minichan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🌟 Barra de navegación -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="wolf.png" alt="logo" class="wolf-logo">
+      <span>Minichan</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="panel.html" class="active">Panel</a></li>
+      <li><a href="guia.html">Guía</a></li>
+      <li><a href="soporte.html">Soporte</a></li>
+    </ul>
+  </nav>
+
+  <!-- ⚙️ Panel de conexión -->
+  <section class="content">
+    <h1>⚙️ Panel de Vinculación</h1>
+    <p>Introduce tu número de WhatsApp para obtener el código o escanear el QR de conexión.</p>
+
+    <div class="card">
+      <input type="text" id="phoneInput" placeholder="+57 300 000 0000" class="input-field">
+
+      <div class="options">
+        <label><input type="radio" name="method" value="code" checked> Código de 8 dígitos</label>
+        <label><input type="radio" name="method" value="qr"> Escanear QR</label>
+      </div>
+
+      <button id="generateButton" class="btn-neon">Generar</button>
+
+      <div id="resultContainer" class="result-box"></div>
+    </div>
+  </section>
+
+  <!-- ✨ Fondo animado -->
+  <canvas id="stars"></canvas>
+
+  <footer>Hecho con 💚 por Brayan & Minichan 🐺</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
