@@ -1,0 +1,157 @@
+/* ----- General ----- */
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ----- Navbar ----- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: cyan;
+  font-size: 20px;
+}
+
+.wolf-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: cyan;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ----- Hero Section ----- */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero span {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+.btn-neon {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: cyan;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-neon:hover {
+  box-shadow: 0 0 20px cyan;
+}
+
+/* ----- Footer ----- */
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ----- Fondo estrellado ----- */
+canvas#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ----- Contenido general de las páginas internas ----- */
+.content {
+  margin-top: 120px; /* ✅ baja el texto para que no lo tape el encabezado */
+  padding: 20px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 2em;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+.content p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  line-height: 1.6em;
+}
